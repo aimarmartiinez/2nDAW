@@ -1,0 +1,228 @@
+main{
+    display: flex;
+    align-items: center;
+}
+main .publication {
+    background-color: var(--bgColor);
+    border: 5px solid var(--borderColor);
+    border-radius: var(--borderRadius);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    width: 700px;
+}
+
+    /* --- Formulario ---*/
+main .publication form.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 650px;
+    gap: var(--spacing-md);
+ }
+
+main .publication .text-fields {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--spacing-sm);
+}
+
+    /* --- Input del título --- */
+main .publication input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--colorText);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    border-bottom: 2px solid var(--borderColor);
+    padding-bottom: var(--spacing-sm);
+    transition: border-color var(--transition-default);
+    width: 100%;
+}
+    /* --- Área de texto --- */
+main .publication textarea {
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--colorText);
+    font-size: var(--font-size-base);
+    padding-top: var(--spacing-xs);
+    line-height: 1.5;
+    transition: border-color var(--transition-default);
+    width: 100%;
+    height: 50px;
+}
+
+    /* --- Focus states --- */
+main .publication input:focus,
+main .publication textarea:focus {
+    border-color: var(--primaryColor);
+}
+
+    /* --- Botón "Post" --- */
+main .publication button {
+    background-color: var(--primaryColor);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--borderRadius);
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+
+main .publication button:hover {
+    transform: scale(1.05);
+}
+
+    
+main .last-posts {
+    margin-top: var(--spacing-lg);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+main .last-posts .post {
+    background-color: var(--bgColor);
+    border-radius: var(--borderRadius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-light);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    height:auto;
+}
+
+main .last-posts .post:hover {
+    background-color: var(--hoverBgColor, rgba(255,255,255,0.03));
+    transform: translateY(-2px);
+}
+
+main .last-posts .post-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+.post-header .time {
+    font-size: 0.9rem;
+    color: gray;
+    position:absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+}
+
+    /* Avatar */
+main .last-posts .post-header img.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%; 
+    object-fit: cover;
+    
+}
+
+    /* Nombre de usuario */
+main .last-posts .post-header .user {
+    font-size: var(--font-size-h3);
+    color: var(--primaryColor);
+}
+
+    /* === Título === */
+main .last-posts .title {
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--colorText);
+}
+
+    /* === Cuerpo === */
+main .last-posts .body {
+    height: auto;
+    color: var(--colorText);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: normal;
+    word-break: normal; 
+}
+
+
+/*Comentarios*/
+/* .showComments{
+    display: none;
+    margin: 2%;
+} */
+.showComments.active{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 5cm;
+    background-color: var(--bg-comment-color);
+    border-radius:20px;
+   
+    
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 20%;
+ 
+    overflow: hidden;
+
+    
+}
+.comment-header{
+    font-size: 1rem;
+    border: solid 2px black;
+
+    
+} 
+
+
+.post-footer {
+    display: flex;
+    align-items: center;           /* centra verticalmente corazón y contador */
+    gap: var(--spacing-sm);        /* espacio entre corazón y contador */
+    margin-top: var(--spacing-md);
+}
+
+.like-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: var(--spacing-xs);
+    display: inline-flex;
+    align-items: center;           /* centra el icono dentro del botón */
+    transition: transform var(--transition-default);
+}
+
+.like-btn:hover .like-icon {
+    transform: scale(1.2);        /* efecto hover */
+}
+
+.like-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform var(--transition-default), filter var(--transition-default);
+    filter: brightness(0.8);
+}
+
+.like-btn.active .like-icon {
+    transform: scale(1.3);
+    filter: hue-rotate(330deg) saturate(2);  /* efecto visual al dar like */
+}
+
+.like-count {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--colorText);
+    user-select: none;
+}

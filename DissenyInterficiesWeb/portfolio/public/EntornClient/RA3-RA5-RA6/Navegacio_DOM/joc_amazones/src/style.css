@@ -1,0 +1,139 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light: #f8e1bc;
+  --dark: #cd9f6a;
+  --white-player: #f4f7ff;
+  --black-player: #273145;
+  --arrow: #7d2f2f;
+  --select: #3a80d2;
+  --hint: #2f9e44;
+  --drop: #ef9f35;
+  --bg: #f4efe7;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #fff6e6 0%, var(--bg) 50%, #e7dccd 100%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.app {
+  width: min(92vw, 760px);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.topbar h1 {
+  font-size: 1.35rem;
+  margin-bottom: 0.3rem;
+}
+
+#status {
+  font-size: 0.98rem;
+  min-height: 1.4rem;
+}
+
+.board {
+  width: min(92vw, 760px);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 4px solid #3a2b1d;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.cell {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: grid;
+  place-items: center;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+.cell.light {
+  background: var(--light);
+}
+
+.cell.dark {
+  background: var(--dark);
+}
+
+.cell.selectable {
+  outline: 3px solid rgba(58, 128, 210, 0.45);
+  outline-offset: -3px;
+  cursor: pointer;
+}
+
+.cell.valid-move {
+  outline: 3px solid rgba(47, 158, 68, 0.9);
+  outline-offset: -3px;
+  background-color: rgba(47, 158, 68, 0.2);
+  cursor: pointer;
+}
+
+.cell.selected {
+  outline: 4px solid var(--select);
+  outline-offset: -4px;
+}
+
+.cell.drop-target {
+  outline: 4px solid var(--drop);
+  outline-offset: -4px;
+}
+
+.piece {
+  width: 72%;
+  height: 72%;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.piece.white {
+  background-image: url('/assets/queenWhite.svg');
+}
+
+.piece.black {
+  background-image: url('/assets/queenBlack.svg');
+}
+
+.arrow {
+  color: var(--arrow);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: 0;
+  background: #2f3a4f;
+  color: #fff;
+  padding: 0.55rem 0.95rem;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f2839;
+}

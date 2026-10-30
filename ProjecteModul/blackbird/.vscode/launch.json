@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Backend",
+            "sourceMaps": true,
+            "preLaunchTask": "tsc: watch - tsconfig.json",
+            "runtimeArgs": ["--watch"],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/backend/app.ts",
+            "outFiles": [
+                "${workspaceFolder}/backend/bin/**/*.js"
+            ]
+        },
+        {
+            "name": "Frontend",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/frontend", // Cambia aquí a tu subcarpeta
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+              "run",
+              "dev"
+            ],
+            "serverReadyAction": {
+              "pattern": "Local:   http://localhost:([0-9]+)/",
+              "action": "debugWithEdge",
+              "uriFormat": "http://localhost:%s",
+              "webRoot": "${workspaceFolder}/frontend"
+            },
+            "console": "integratedTerminal"
+          }
+    ],
+    "compounds": [
+        {
+            "name": "Start App",
+            "configurations": ["Backend","Frontend"]
+        }
+    ]
+}

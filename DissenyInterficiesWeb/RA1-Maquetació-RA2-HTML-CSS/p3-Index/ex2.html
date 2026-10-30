@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankWise</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    body{
+        background-color:lightgray;
+        color:ghostwhite;
+        padding: 20px;
+    }
+    
+    header h1 {
+        margin-right: auto;
+        color: darkblue;
+        width : 100%;
+        text-align: left;
+    }
+    nav {
+        position : absolute;
+        width: 100%;
+       top: 30px;
+        text-align: center;
+
+
+    }
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+    nav a:hover{
+        border-bottom: 2px solid darkblue;
+    }
+    main{
+        margin-top: 50px;
+    }
+    h1{
+        color: darkblue;
+    }
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 20px;
+        color: black;
+    }
+    .container {
+        position: absolute;
+    }
+
+    .cardgreen h1, .cardblue h1 {
+        color: lightgray;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    .chip {
+      width: 50px;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+
+    .cardgreen h2, .cardblue h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .number {
+        font-size: 25px;
+        letter-spacing: 10px;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .name {
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        font-size: 16px;
+    }
+
+    .expiry{
+        color: lightgray;
+        text-align: left;
+        bottom: 60px;
+        position: absolute;
+        bottom: 80px;
+        right: 20px;
+        font-size: 14px;
+    }
+    .expiry p{
+        color: white;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .logo {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+        width: 70px;
+        height: auto;
+    }
+    
+    .cardgreen {
+        background: linear-gradient(to right, #009924c4, #28a746bb );
+        backdrop-filter: blur(15px);
+        z-index: 2;
+        left: 200px;
+        top: 40px;
+        position: absolute;
+        width: 450px;
+        height: 250px;
+        border-radius: 20px;
+        color: white;
+        box-sizing: border-box;
+    }
+    .cardblue {
+        background: linear-gradient(135deg, #001429c8, #258effc7);
+        z-index: 1;
+        top: 20px;
+        position: absolute;
+        width: 450px;
+        height: 250px;
+        border-radius: 20px;
+        color: white;
+        box-sizing: border-box;
+    }
+    .caja {
+        position: absolute;
+        top: 170px;
+        right:150px;
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        width: 400px;
+        height: 210px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        font-family: sans-serif;
+    }
+
+    .caja h2 {
+        margin: 10px 0;
+        color: #002b5c;
+    }
+
+    .spend {
+        margin-top: 50px;
+    }
+    .caja p {
+        
+        margin: 5px 0;
+        color: gray;
+    }
+
+    .caja b {
+        color: #002b5c;
+    }
+
+    .botones {
+        
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .botones button {
+        flex: 1;
+        background: #002b5c;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .botones .puntos {
+        flex: 0;
+        width: 40px;
+        height: 40px;
+        background: #ddd;
+        color: black;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <header>
+        <h1>BankWise</h1>
+        <nav>
+            <a href="">Dashboard</a>
+            <a href="">Transactions</a>
+            <a href="">Analytics</a>
+            <a href="">History</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome back, Felix!</h2>
+
+        <div class="container">
+        
+            <div class="cardblue">
+                <img src="sim.png"class="chip">
+                <h1>CREDIT CARD</h1>
+                <div class="number">1234 5678 9123 4567</div>
+                <div class="name">James Clark</div>
+                <div class="expiry">Expiry Date<br><p>09 / 28</p></div>
+                <img src="mastercard.png" class="logo">
+            </div>
+
+            <div class="cardgreen">
+                <img src="sim.png"class="chip">
+                <h1>CREDIT CARD</h1>
+                <div class="number">1234 5678 9123 4567</div>
+                <div class="name">James Clark</div>
+                <div class="expiry">Expiry Date<br><p>09 / 28</p></div>
+
+                <img src="mastercard.png" class="logo">
+            </div>
+        </div>
+            
+        <div class="caja">
+            <p>Total Balance</p>
+            <h2>$87,567,890</h2>
+            <div class="spend">
+                <p>Available to spend: <b>$87,567,890</b></p>
+            </div>
+            <div class="botones">
+                <button>Transfer </button>
+                <button>Request </button>
+                <button class="puntos">⋯</button>
+            </div>
+        </div>
+    </main>     
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joc de les Amazones</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>Joc de les Amazones</h1>
+        <p id="status" aria-live="polite"></p>
+      </header>
+
+      <section id="board" class="board" aria-label="Tauler de joc"></section>
+
+      <div class="actions">
+        <button id="reset" type="button">Reiniciar partida</button>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

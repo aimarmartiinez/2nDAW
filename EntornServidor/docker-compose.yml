@@ -1,0 +1,38 @@
+services:
+#  db:
+#    image: mysql:latest
+#    restart: always
+#    environment:
+#      #MYSQL_DATABASE: 'my-app'
+#      # So you don't have to use root, but you can if you like
+#      MYSQL_USER: 'jvalentin'
+#      # You can use whatever password you like
+#      MYSQL_PASSWORD: '12345678'
+#      # Password for root access
+#      MYSQL_ROOT_PASSWORD: 'jvalentin79'
+#    ports:
+#      # <Port exposed> : < MySQL Port running inside container>
+#      - '3306:3306'
+#    expose:
+#      # Opens port 3306 on the container
+#      - '3306'
+#      # Where our data will be persisted
+#    volumes:
+#      - my-db:/var/lib/mysql
+# Names our volume
+    mysql:
+        image: mysql:latest
+        #container_name: ${PROJECT_NAME}_mysql
+        #command: ["--default-authentication-plugin=mysql_native_password"]
+        environment:
+          MYSQL_DATABASE: test_laravel_app
+          MYSQL_USER: test
+          MYSQL_PASSWORD: test
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - "3307:3306"
+        volumes:
+          - ./db_data:/var/lib/mysql
+# Names our volume
+volumes:
+  db_data:

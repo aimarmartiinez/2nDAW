@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen M06 UF3 23-24</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contingut">
+
+
+        <header class="banner">
+            <h1>Examen M06 UF3 23-24</h1>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#acl">Aclaracions</a></li>
+                <li><a href="#ex1">Exercici 1</a></li>
+                <li><a href="#ex2">Exercici 2</a></li>
+                <li><a href="#ex3">Exercici 3</a></li>
+                <li><a href="#ex4">Exercici 4</a></li>
+                <li><a href="#ex5">Exercici 5</a></li>
+                <li><a href="#ex6">Exercici 6</a></li>
+                <li><a href="#ex7">Exercici 7</a></li>
+            </ul>
+        </nav>
+        <main>
+
+            <article id="acl">
+                <p>
+                </p>
+                <header>
+                    <h2>Aclaracions i apunts</h2>
+                </header>
+                <h2>Aclaracions</h2>
+                <p>
+                    L'accés a internet està prohibit, abans de començar s'ha de tenir el cable de xarxa desconnectat o
+                    el
+                    wifi desactivat.
+                </p>
+                <p>
+                    Totes les funcions que demana crear en els diferents exercicis s'han de crear amb el nom exacte i
+                    acceptar el paràmetres que demana l'exercici.
+                </p>
+                <p>
+                    Només es pot fer servir el visual studio i un navegador, al navegador evitar tenir més d'una
+                    pestanya oberta.
+                </p>
+                <p>
+                    Al visual studio només es pot tenir obert la carpeta de l'examen, no es pot mirar activitats
+                    anteriors ni tenir apunts oberts.
+                </p>
+                <h2>Apunts</h2>
+                <p>
+                    Condicionals
+                <pre>
+                    <code>
+    //simple condition
+    if (hour < 18) {
+        greeting = "Good day";
+    } 
+    // else statement
+    if (hour < 18) {
+        greeting = "Good day";
+        } else {
+        greeting = "Good evening";
+        }
+    // elseif statement
+    if (time < 10) {
+        greeting = "Good morning";
+        } else if (time < 20) {
+        greeting = "Good day";
+        } else {
+        greeting = "Good evening";
+        }
+                    </code>
+                </pre>
+                </p>
+                <p>
+                    Bucles
+                <pre>
+                    <code>
+    //for statement
+    for (let step = 0; step < 5; step++) {
+        // Se ejecuta 5 veces, con valores del paso 0 al 4.
+        console.log('Camina un paso hacia el este');
+        }
+    //while statement
+    let n = 0;
+    let x = 0;
+    while (n < 3) {
+        n++;
+        x += n;
+    }
+    //for in
+    for (let i in array) {
+        result += array[i] 
+    }
+    //for of
+    for (let i in array) {
+        result += i 
+    }
+                    </code>
+                </pre>
+                </p>
+    <p>Accés al DOM</p>
+     <p>   Obtenir un element:
+    <pre>
+        <code>
+let element = document.getElementById('para');   
+        </code>
+Modificar el seu contingut:
+        <code>
+let element = document.getElementById('para');
+element.innerHTML = "I have changed!";
+        </code>
+Modificar la seva classe:
+        <code>
+let element = document.getElementById('para');
+element.className = "cssClass";
+        </code>
+    </pre>
+    </p>
+    <p>
+        Obtenir un valor random
+        <code>
+            // Returns a random integer from 0 to 9:<br>
+            Math.floor(Math.random() * 10);
+        </code>
+
+    </p>
+    <p>Recorre el DOM</p>
+    <code>
+        for(let j; j < element.children.length; j++){
+            console.log(element.children[j])
+        }    
+    </code>
+    <code>
+        let parent = element.parent
+    </code>
+    <p>Llegir i modificar classes d'elements</p>
+    <code>
+        if(div.classList.contains("oneclass")) {
+
+        }
+        div.classList.remove("foo");
+        div.classList.add("anotherclass");
+        div.classList.toggle("visible")
+    </code>
+    <p>Events</p>
+    <p>
+        Per afegir un event a un element HTML:
+        <code>
+        <pre>
+let element = document.getElementById('element')
+//opció 1
+element.onclick = foo
+//opció 2
+element.addEventListener('click', foo)
+        </pre>
+    </code>
+    Els events que podem fer servir són:
+    <ul>
+        <li>click</li>
+        <li>mousedown</li>
+        <li>mouseup</li>
+        <li>keypress</li>
+        <li>keyup</li>
+        <li>keydown</li>
+    </ul>
+    </p>    
+<p>Drag and drop</p>
+<p>Drag an drop és un event especial que ens permet capturar els events 
+    que succceixen durant l'arrosegament d'un element.
+    els events que succeixen són:
+    <ul>
+        <li>dragstart</li>
+        <li>dragover</li>
+        <li>dragenter</li>
+        <li>dragleave</li>
+        <li>dragend</li>
+        <li>drop</li>
+    </ul>
+    Entre els event dragstart i drop es pot compartir informació fent servir
+    el metode setData i getData.
+    <code>
+        <pre>
+function dragstart(e){
+    e.setData('key','value')
+}
+funcion drop(e){
+    let value = e.get data('key', 'value')
+}
+        </pre>
+    </code>
+    Per poder permetre l'acció de drop hem de fer <code>e.preventDefault()</code>
+    durant el dragover.
+
+</p>
+
+                </pre>
+                </p>
+                <p>
+                    Establir un delay:
+                    <code>
+                setTimeout(() => {
+                    console.log("Delayed for 1 second.");
+                  }, 1000)                  
+            </code>
+                </p>
+            </article>
+            <article id="ex1">
+                <header>
+                    <h2>Validació formulari reserva parking (2,5 punts)</h2>
+                    <p>En el següent formulari fes que cada input canvi la classe de CSS 'ex1-valid' quan 
+                        es verifiqui els següents punts. Si es torna a modificar ha de tonar a verificar
+                        les dades.
+                        Cada verificació s'ha de fer mentre l'usuari va escrivint dins del input.
+                    <p>
+                        Verifica que:
+                    <ol>
+                        <li>(1p) Els camps nom i cognoms només conté lletres es a dir no pot contenir números
+                            ni els següents símbols especials
+                            ('!','"','·','$','%','&','/','(',')','=','?','¿','*','_','-').</li>
+                        <li>(1p) El camp matricula cotxe ha de contenir 4 digits i 3 lletres que no siguin vocals.</li>
+                    </ol>
+
+                    Si hi ha algun camp no compleix amb alguns d'aquests requisits demanats, fes que el
+                    color de la vora de l'input es posi de color vermell fent servir la classe 'ex1-error'.
+                    Si tot és correcte habilita el botó amb l'id <code>reserve</code> si és modifica amb dades no valides torna a deshabilitar-ho.(0,5p).
+                    </p>
+                    <strong>No es pot fer servir expressions regulars per validar el contingut. Els mètodes de natius de
+                        javascript si estan permesos.</strong>
+                    <p>
+                    <form name="parking" id="parking">
+                        <label for="firstname">Nom:</label><br>
+                        <input type="text" class="ex1-error" id="firstname" name="firstname"><br>
+                        <label for="lastname">Cognoms:</label><br>
+                        <input type="text" id="lastname" class="ex1-error" name="lastname"><br>
+                        <label for="licensePlate">Matricula cotxe:</label><br>
+                        <input type="text" id="licensePlate" class="ex1-error" name="licensePlate"><br>
+                        <input type="button" id="reserve" value="Reservar" disabled="true"></input><br>
+                    </form>
+                    </p>
+                </header>
+            </article>
+            <article id="ex2">
+                <header>
+                    <h2>Joc de memòria (1,5 punts)</h2>
+                    <p>El joc de memòria consisteix en unes cartes on hi ha 
+                        una parella de cartes amb el mateix dibuix. Aquestes cartes
+                        es posen cap per baix i en cada torn el jugador ha de girar 
+                        dues cartes si aquestes tenen el mateix dibuix les cartes es
+                        queden girades. Si les cartes no són iguals quan l'usuari torni
+                        a fer clic a una altra carta torna a girar-les per amagar-les.
+                        Fes servi la classe <code>show</code> per mostar la carta.
+                    </p>
+                    <div id="memory-board">
+                        <div>
+                            <div class="elefant"></div>
+                            <div class="jirafa"></div>
+                            <div class="hipopotam"></div>
+                            <div class="koala"></div>
+                        </div>
+                        <div>
+                            <div class="mico"></div>
+                            <div class="os-gris"></div>
+                            <div class="panda"></div>
+                            <div class="os-gris"></div>
+                        </div>
+                        <div>
+                            <div class="hipopotam"></div>
+                            <div class="jirafa"></div>
+                            <div class="os-gris"></div>
+                            <div class="mico"></div>
+                        </div>
+                        <div>
+                            <div class="koala"></div>
+                            <div class="panda"></div>
+                            <div class="elefant"></div>
+                            <div class="os-gris"></div>
+                        </div>
+                    </div>
+                    
+                </header>
+            </article>
+
+
+            <article id="ex3">
+                <header>
+                    <h2>Barreja de colors(3p)</h2>
+                </header>
+                <p>
+                    1. Fes que l'usuari pugui arrosegar els diferents colors sobre altres. Quan l'usuari deixi anar un
+                    color sobre d'un altre fes que els colors es barrejin.
+                </p>
+                <p>
+                    Exemple:
+                <div class="exemplesColors">
+                    <div style="background-color: #ff0000;"></div>
+                    <span>+</span>
+                    <div style="background-color: #00ff00;"></div>
+                    <span>=</span>
+                    <div style="background-color: #ffff00;"></div>
+                </div>
+                </p>
+                <p>
+                    2. Fes que al posar el color d'origien a sobre del color de destí ja canvi el color de destí amb la
+                    barreja, però si el mou a un altre lloc que torni al seu color original.
+                </p>
+
+                <div class="inline">
+                    <table id="mix-color" class="select">
+                        <tr>
+                            <td draggable="true" style="background-color: rgb(255,0,0);"></td>
+                            <td draggable="true" style="background-color: rgb(0,255,0);"></td>
+                            <td draggable="true" style="background-color: rgb(0,0,255);"></td>
+                        <tr>
+                            <td draggable="true" style="background-color: rgb(128,0,128);"></td>
+                            <td draggable="true" style="background-color: rgb(0,128,128);"></td>
+                            <td draggable="true" style="background-color: rgb(128,0,0);"></td>
+                        </tr>
+                        <tr>
+                            <td draggable="true" style="background-color: rgb(128,128,128);"></td>
+                            <td draggable="true" style="background-color: rgb(0,0,128);"></td>
+                            <td draggable="true" style="background-color: rgb(0,128,0);"></td>
+                        </tr>
+                    </table>
+                </div><br>
+
+
+            </article>
+
+            <article id="ex4">
+                <header>
+                    <h2>Candy Crush (3p)</h2>
+                </header>
+                <p>
+                    Candy crush és un joc on s'han de moure els caramels per tal de acoseguir que 3 o 
+                    més caramels del mateix color s'estigin tocant en la mateixa línia ja sigui en 
+                    vertical o horitzontal. 
+                </p>
+                <p>
+                    (3p) Fent servir els events mousedown i mouseup (recorda que a l'objecte de l'event
+                    tenen la posisció del ratolí) calcula en quina direcció ha fet el gest el usuari 
+                    i intercanvia la peça amb la peça que té al costat.
+                </p>                
+
+                <div id="candy-table">
+                    <div class="row" data-row="0">
+                        <div data-col="0" class="green">
+                        </div>
+                        <div data-col="1" class="green">
+                        </div>
+                        <div data-col="2" class="orange">
+                        </div>
+                        <div data-col="3" class="yellow">
+                        </div>
+                        <div data-col="4" class="yellow">
+                        </div>
+                        <div data-col="5" class="blue">
+                        </div>
+                        <div data-col="6" class="blue">
+                        </div>
+                        <div data-col="7" class="yellow">
+                        </div>
+                    </div>
+                    <div class="row" data-row="1">
+                        <div data-col="0" class="blue">
+                        </div>
+                        <div data-col="1" class="yellow">
+                        </div>
+                        <div data-col="2" class="green">
+                        </div>
+                        <div data-col="3" class="green">
+                        </div>
+                        <div data-col="4" class="orange">
+                        </div>
+                        <div data-col="5" class="orange">
+                        </div>
+                        <div data-col="6" class="blue">
+                        </div>
+                        <div data-col="7" class="green">
+                        </div>
+                    </div>
+                    <div class="row" data-row="2">
+                        <div data-col="1" class="orange">
+                        </div>
+                        <div data-col="1" class="yellow">
+                        </div>
+                        <div data-col="2" class="orange">
+                        </div>
+                        <div data-col="3" class="yellow">
+                        </div>
+                        <div data-col="4" class="green">
+                        </div>
+                        <div data-col="5" class="blue">
+                        </div>
+                        <div data-col="6" class="green">
+                        </div>
+                        <div data-col="7" class="green">
+                        </div>
+                    </div>
+                    <div class="row" data-row="3">
+                        <div data-col="0" class="blue">
+                        </div>
+                        <div data-col="1" class="orange">
+                        </div>
+                        <div data-col="2" class="orange">
+                        </div>
+                        <div data-col="3" class="green">
+                        </div>
+                        <div data-col="4" class="yellow">
+                        </div>
+                        <div data-col="5" class="green">
+                        </div>
+                        <div data-col="6" class="blue">
+                        </div>
+                        <div data-col="7" class="orange">
+                        </div>
+                    </div>
+                    <div class="row" data-row="4">
+                        <div data-col="0" class="yellow">
+                        </div>
+                        <div data-col="1" class="orange">
+                        </div>
+                        <div data-col="2" class="green">
+                        </div>
+                        <div data-col="3" class="yellow">
+                        </div>
+                        <div data-col="4" class="blue">
+                        </div>
+                        <div data-col="5" class="yellow">
+                        </div>
+                        <div data-col="6" class="blue">
+                        </div>
+                        <div data-col="7" class="green">
+                        </div>
+                        
+                    </div>
+                    <div class="row" data-row="5">
+                        <div data-col="0" class="green">
+                        </div>
+                        <div data-col="1" class="green">
+                        </div>
+                        <div data-col="2" class="green">
+                        </div>
+                        <div data-col="3" class="red">
+                        </div>
+                        <div data-col="4" class="green">
+                        </div>
+                        <div data-col="5" class="yellow">
+                        </div>
+                        <div data-col="6" class="blue">
+                        </div>
+                        <div data-col="7" class="blue">
+                        </div>
+                    </div>
+                    <div class="row" data-row="6">
+                        <div data-col="0" class="yellow">
+                        </div>
+                        <div data-col="1" class="red">
+                        </div>
+                        <div data-col="2" class="green">
+                        </div>
+                        <div data-col="3" class="green">
+                        </div>
+                        <div data-col="4" class="orange">
+                        </div>
+                        <div data-col="5" class="orange">
+                        </div>
+                        <div data-col="6" class="yellow">
+                        </div>
+                        <div data-col="7" class="red">
+                        </div>
+                    </div>
+                    <div class="row" data-row="7">
+                        <div data-col="0" class="green">
+                        </div>
+                        <div data-col="1" class="red">
+                        </div>
+                        <div data-col="2" class="orange">
+                        </div>
+                        <div data-col="3" class="green">
+                        </div>
+                        <div data-col="4" class="yellow">
+                        </div>
+                        <div data-col="5" class="yellow">
+                        </div>
+                        <div data-col="6" class="yellow">
+                        </div>
+                        <div data-col="7" class="yellow">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="ex5">
+                <header>
+                    <h2>Tres en ratlla (3p)</h2>
+                </header>
+                <p>
+                    El Tres en ratlla Ã©s un joc de dos jugadors on cada jugador marca una casella del tauler
+                    en el seu torn. Guanya qui aconsegueix posar 3 fitxes iguals en li­nia horitzontal, vertical
+                    o diagonal.
+                </p>
+                <p>
+                    (1p) Fes que en cada clic sobre una casella buida es posi el si­mbol del jugador actual
+                    (<code>X</code> o <code>O</code>) i que alterni de torn.
+                </p>
+                <p>
+                    (1p) Crea la funciÃ³ <code>checkWinnerTicTacToe(cells)</code> que comprovi si hi ha una
+                    li­nia guanyadora i indiqui el jugador guanyador.
+                </p>
+                <p>
+                    (1p) Quan la partida acabi, mostra el resultat dins l'element amb id <code>ex5-result</code>
+                    i evita que es puguin seguir fent jugades.
+                </p>
+                <div id="tic-tac-toe">
+                    <div class="ttt-cell" data-row="0" data-col="0"></div>
+                    <div class="ttt-cell" data-row="0" data-col="1"></div>
+                    <div class="ttt-cell" data-row="0" data-col="2"></div>
+                    <div class="ttt-cell" data-row="1" data-col="0"></div>
+                    <div class="ttt-cell" data-row="1" data-col="1"></div>
+                    <div class="ttt-cell" data-row="1" data-col="2"></div>
+                    <div class="ttt-cell" data-row="2" data-col="0"></div>
+                    <div class="ttt-cell" data-row="2" data-col="1"></div>
+                    <div class="ttt-cell" data-row="2" data-col="2"></div>
+                </div>
+                <p id="ex5-result" class="resultatEx5"></p>
+            </article>
+            <article id="ex6">
+                <header>
+                    <h2>Exercici 6</h2>
+                </header>
+                <p>Fes que al arrosegar un element es sumi el valor del element arrossegat al element desti</p>
+                <div id="sum-numbers">
+                    <div draggable="true" class="ttt-cell">1</div>
+                    <div draggable="true" class="ttt-cell">2</div>
+                    <div draggable="true" class="ttt-cell">3</div>
+                    <div draggable="true" class="ttt-cell">4</div>
+                    <div draggable="true" class="ttt-cell">5</div>
+                    <div draggable="true" class="ttt-cell">6</div>
+                    <div draggable="true" class="ttt-cell">7</div>
+                    <div draggable="true" class="ttt-cell">8</div>
+                    <div draggable="true" class="ttt-cell">9</div>
+                </div>
+            </article>
+            <article id="ex7">
+                <header>
+                    <h2>Puzzle lliscant (3p)</h2>
+                </header>
+                <p>
+                    Mou les peces del puzzle i intenta ordenar-les de l'1 al 8 deixant l'espai buit al final.
+                </p>
+                <div id="puzzle-board">
+                    <div class="puzzle-tile">1</div>
+                    <div class="puzzle-tile">2</div>
+                    <div class="puzzle-tile">3</div>
+                    <div class="puzzle-tile">4</div>
+                    <div class="puzzle-tile">5</div>
+                    <div class="puzzle-tile">6</div>
+                    <div class="puzzle-tile">7</div>
+                    <div class="puzzle-tile">8</div>
+                    <div class="puzzle-tile empty"></div>
+                </div>
+                <p id="ex7-result"></p>
+            </article>
+        </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+
+
+
+
+
+

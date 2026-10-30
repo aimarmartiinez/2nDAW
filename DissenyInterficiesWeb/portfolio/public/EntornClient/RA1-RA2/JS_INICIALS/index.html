@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados JS</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; background: #f8f9fa; color: #212529; }
+    h1 { font-size: 1.5rem; margin-bottom: .75rem; }
+    pre { background: #fff; padding: 1rem; border: 1px solid #dee2e6; border-radius: 4px; white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <h1>Resultados de todos los scripts</h1>
+  <pre id="output"></pre>
+
+  <script>
+    const outputEl = document.getElementById('output');
+    const originalLog = console.log.bind(console);
+    console.log = function(...args) {
+      originalLog(...args);
+      const message = args.map(value => {
+        if (typeof value === 'object') {
+          try {
+            return JSON.stringify(value);
+          } catch (err) {
+            return String(value);
+          }
+        }
+        return String(value);
+      }).join(' ');
+      outputEl.textContent += message + '\n';
+    };
+  </script>
+
+  <script src="anagrama.js"></script>
+  <script src="areaPoligono.js"></script>
+  <script src="contarPalabras.js"></script>
+  <script src="decimal-Binario.js"></script>
+  <script src="fibonacci.js"></script>
+  <script src="fizzBuzz.js"></script>
+  <script src="invertirCadena.js"></script>
+  <script src="morse.js"></script>
+  <script src="primos.js"></script>
+</body>
+</html>

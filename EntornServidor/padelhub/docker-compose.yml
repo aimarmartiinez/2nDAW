@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:
+
+  app:
+    build: .
+    container_name: padelhub_app
+    working_dir: /var/www/html
+
+    volumes:
+      - /var/www/padelhub/current:/var/www/html
+      - /var/www/padelhub/shared/storage:/var/www/html/storage
+      - /var/www/padelhub/shared/bootstrap-cache:/var/www/html/bootstrap/cache
+      - /var/www/padelhub/shared/.env:/var/www/html/.env:ro
+    depends_on:
+      - db
+
+    networks:
+      - padelhub_net
+
+
+  webserver:
+    image: nginx:alpine
+    container_name: padelhub_webserver
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - /var/www/padelhub/current:/var/www/html
+      - /var/www/padelhub/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - /var/www/padelhub/nginx/certs:/etc/nginx/certs
+
+    depends_on:
+      - app
+
+    networks:
+      - padelhub_net
+
+
+  db:
+    image: mysql:8.0
+    container_name: padelhub_db
+
+    environment:
+      MYSQL_DATABASE: padelhub
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: padelhub
+      MYSQL_PASSWORD: root
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+    networks:
+      - padelhub_net
+
+
+volumes:
+  db_data:
+
+networks:
+  padelhub_net:
+    driver: bridge

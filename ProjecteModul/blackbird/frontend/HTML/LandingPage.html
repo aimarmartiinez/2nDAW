@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBird</title>
+    <link rel="stylesheet" href="./Styles/landing-style.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+</head>
+<body>
+    <header>
+        <img src="./Images/logo1.png" alt="BlackBird Logo" class="Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+            <a class="sign-up" href="./signIn.html">Sign In</a>
+            
+    </header>
+
+    <main>
+        <div class="curved-div">
+            <img src="./images/logo2.png" alt="BlackBird Logo" class="Logo">
+        </div>
+
+        <section>
+            <h2>Welcome to BlackBird!</h2>
+            <p>A space where creativity meets seriousness.
+               Connect, share and discover inspiring ideas.
+               Designed for young people, open to everyone</p>
+            <span class="inline-style">Express yourself. Connect. Evolve.</span>
+            <a class="sign-up" href="./signIn.html">Get Started</a>
+        </section>
+    </main>
+        <hr>
+
+    <article id="about">
+        <h2>About Us</h2>
+        <p>
+            At BlackBird, we believe that words have power. 
+            That one idea can change a conversation, and one conversation can change the world. 
+            We were born with the conviction that social media can be much more than just content showcases: 
+            it can be a space where voices matter, where creativity and opinion come together to build something meaningful.
+        </p>
+        <span class="inline-style">Express yourself. Connect. Evolve.</span>
+    </article>
+
+<footer id="contact">
+  <div class="contact-info">
+    <h2>Contact</h2>
+    <p><strong>General Email:</strong><br>
+      <a href="mailto:contact@blackbird.com">contact@blackbird.com</a></p>
+
+    <p><strong>Technical Support / User Help:</strong><br>
+      <a href="mailto:support@blackbird.com">support@blackbird.com</a></p>
+
+    <p><strong>Press & Media:</strong><br>
+      <a href="mailto:press@blackbird.com">press@blackbird.com</a></p>
+
+    <p><strong>Social Media:</strong></p>
+    <ul>
+      <li>Twitter / X: <a href="#">@BlackBirdOfficial</a></li>
+      <li>Instagram: <a href="#">@BlackBirdOfficial</a></li>
+      <li>LinkedIn: <a href="#">BlackBird</a></li>
+    </ul>
+  </div>
+
+
+        <div class="form">
+            <h1>Contact Us</h1>
+<form id="contact-form">
+  <input type="text" name="nombre" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="subject" placeholder="Subject" required>
+  <textarea name="mensaje" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+<p id="resultado"></p>
+        </div>
+        <span class="footer-copy">© 2025 Blackbird. All rights reserved.</span>
+    </footer>
+
+
+    <script src="./JS/landing-script.js"></script>
+</body>
+</html>

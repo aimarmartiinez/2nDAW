@@ -1,0 +1,45 @@
+services:
+  app-solucio:
+    build: .
+    container_name: ra7-solucio-app
+    ports:
+      - "8701:8000"
+    environment:
+      APP_NAME: "Recipes API Solucio"
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:8701
+      DB_CONNECTION: mysql
+      DB_HOST: db-solucio
+      DB_PORT: 3306
+      DB_DATABASE: recipes_solucio_db
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+    depends_on:
+      db-solucio:
+        condition: service_healthy
+    networks:
+      - ra7-solucio-network
+
+  db-solucio:
+    image: mysql:8.0
+    container_name: ra7-solucio-db
+    environment:
+      MYSQL_DATABASE: recipes_solucio_db
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ra7-solucio-db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+    networks:
+      - ra7-solucio-network
+
+networks:
+  ra7-solucio-network:
+    driver: bridge
+
+volumes:
+  ra7-solucio-db-data:

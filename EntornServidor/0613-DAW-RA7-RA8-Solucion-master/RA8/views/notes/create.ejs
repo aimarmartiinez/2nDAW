@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+
+<h1>Crear Nova Nota</h1>
+
+<% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+    <div class="alert alert-danger">
+        <ul>
+            <% errors.forEach(function(error) { %>
+                <li><%= error %></li>
+            <% }); %>
+        </ul>
+    </div>
+<% } %>
+
+<form action="/notes" method="POST" class="form">
+    <div class="form-group">
+        <label for="title">Títol:</label>
+        <input type="text" id="title" name="title" required class="form-control"
+               placeholder="Escriu el títol de la nota...">
+    </div>
+
+    <div class="form-group">
+        <label for="content">Contingut:</label>
+        <textarea id="content" name="content" rows="5" required class="form-control"
+                  placeholder="Escriu el contingut..."></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Categoria:</label>
+        <select id="category" name="category" class="form-control">
+            <option value="General">General</option>
+            <option value="Treball">Treball</option>
+            <option value="Personal">Personal</option>
+            <option value="Estudis">Estudis</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="priority">Prioritat:</label>
+        <select id="priority" name="priority" class="form-control">
+            <option value="low">Baixa</option>
+            <option value="medium" selected>Mitjana</option>
+            <option value="high">Alta</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Crear Nota</button>
+    <a href="/notes" class="btn">Cancel·lar</a>
+</form>
+
+<%- include('../partials/footer') %>

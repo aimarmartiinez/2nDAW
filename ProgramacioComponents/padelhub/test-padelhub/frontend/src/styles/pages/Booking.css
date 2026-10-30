@@ -1,0 +1,60 @@
+.booking-app {
+    max-width: var(--bs-max-width, 1400px);
+    margin: 0 auto;
+    padding: var(--bs-padding, 40px) var(--bs-gap, 24px);
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    background: var(--color-white, #fff);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--bs-shadow-lg, 0 10px 25px rgba(5, 53, 83, 0.08));
+    padding: 0;
+}
+
+.booking-main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.club-info {
+    margin-top: 8px;
+}
+
+.club-info h2 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.club-info span {
+    color: var(--color-text-light, #7b8a98);
+    font-size: 1rem;
+}
+
+@media (max-width:1024px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+    .booking-main {
+        padding: 28px;
+        gap: 24px;
+    }
+    .booking-app {
+        padding: 28px 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .booking-main {
+        padding: 18px;
+        gap: 16px;
+    }
+    .booking-app {
+        padding: 18px 12px;
+    }
+}

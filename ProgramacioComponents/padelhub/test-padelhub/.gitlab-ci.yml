@@ -1,0 +1,27 @@
+stages:
+  - test
+  - deploy
+
+test_pipeline:
+  stage: test
+  tags:
+    - laravel
+  script:
+    - echo "✅ Pipeline funcionant correctament!"
+    - echo "Data: $(date)"
+    - echo "Usuari: $(whoami)"
+    - echo "Directori: $(pwd)"
+    - echo "Versió: ${CI_COMMIT_TAG:-Sense tag}"
+
+deploy_production:
+  stage: deploy
+  tags:
+    - laravel
+  only:
+    - tags
+  script:
+    - echo "🚀 Desplegant versió ${CI_COMMIT_TAG}"
+    - sudo /usr/local/bin/deploy-padelhub.sh ${CI_COMMIT_TAG}
+  environment:
+    name: production
+    url: http://10.2.169.236

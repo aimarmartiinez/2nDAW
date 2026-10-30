@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 2 - Disseny Responsive</title>
+    <style>
+        :root {
+            --background: #eef4fb;
+            --surface: #ffffff;
+            --topbar: #1f3757;
+            --nav-bg: #f7f9fc;
+            --side-bg: #2f80ed;
+            --hero-bg: #4a90e2;
+            --text-color: #1d2939;
+            --text-muted: #586275;
+            --text-light: #ffffff;
+            --border-color: #dbe2ea;
+            --accent-color: #2d9cdb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #13161d;
+                --surface: #1e2430;
+                --topbar: #111828;
+                --nav-bg: #141b2f;
+                --side-bg: #2153a1;
+                --hero-bg: #1d3a70;
+                --text-color: #e2e8f0;
+                --text-muted: #9ca3af;
+                --text-light: #f8fafc;
+                --border-color: #2c3346;
+                --accent-color: #3b82f6;
+            }
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--background);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: var(--header);
+            color: var(--on-dark);
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .status {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .status span {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: var(--text-light);
+            opacity: 0.7;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0.85rem 1.5rem;
+            background: var(--nav);
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            color: var(--text);
+            background: rgba(45, 156, 219, 0.1);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            background: rgba(45, 156, 219, 0.17);
+        }
+
+        .grid {
+            display: grid;
+            gap: 0;
+            grid-template-areas:
+                "banner"
+                "main-content"
+                "side";
+        }
+
+        .banner {
+            grid-area: banner;
+            min-height: 240px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--hero-bg), var(--accent-color));
+            color: var(--text-light);
+            position: relative;
+        }
+
+        .banner::after {
+            content: "IMATGE";
+            font-size: 2rem;
+            letter-spacing: 0.15em;
+            opacity: 0.85;
+        }
+
+        .main-content {
+            grid-area: main-content;
+            padding: 1.5rem;
+        }
+
+        article {
+            padding: 1rem 0;
+        }
+
+        article + article {
+            border-top: 1px solid var(--border);
+        }
+
+        h2 {
+            margin: 0 0 0.75rem;
+            font-size: 1.15rem;
+        }
+
+        p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .side {
+            grid-area: side;
+            background: var(--side-bg);
+            color: var(--text-light);
+            padding: 1.5rem;
+        }
+
+        aside h3 {
+            margin-top: 0;
+        }
+
+        aside ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        aside li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.16);
+        }
+
+        aside li:last-child {
+            border-bottom: none;
+        }
+
+        .note {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 720px) {
+            .grid {
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas:
+                    "banner banner"
+                    "main-content side";
+            }
+            .banner { min-height: 280px; }
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas:
+                    "banner side"
+                    "main-content side";
+            }
+            .banner { min-height: 320px; }
+            nav { padding: 1rem 2rem; }
+            .main-content { padding: 2rem; }
+            .side { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <p class="note">Redimensiona la finestra · S'adapta automàticament al tema clar/fosc del sistema</p>
+
+    <div class="container">
+        <header>
+            <div class="logo">El meu lloc web</div>
+            <div class="status">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="#">Inici</a>
+            <a href="#">Productes</a>
+            <a href="#">Serveis</a>
+            <a href="#">Sobre nosaltres</a>
+            <a href="#">Contacte</a>
+        </nav>
+
+        <div class="grid">
+            <section class="banner"></section>
+
+            <main class="main-content">
+                <article class="article">
+                    <h2>Disseny responsive amb media queries</h2>
+                    <p>Aquest layout s'adapta automàticament a tres mides: escriptori, tauleta i mòbil. Utilitzem CSS Grid amb àrees nomenades per reorganitzar el contingut segons l'amplada del dispositiu.</p>
+                </article>
+
+                <article class="article">
+                    <h2>Suport per tema clar i fosc</h2>
+                    <p>Mitjançant la media query <code>prefers-color-scheme</code>, la pàgina detecta automàticament la preferència del sistema operatiu i aplica el tema corresponent sense necessitat d'interacció de l'usuari.</p>
+                </article>
+
+                <article class="article">
+                    <h2>Estructura semàntica</h2>
+                    <p>Utilitzem etiquetes HTML5 com <code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code> i <code>aside</code> per garantir l'accessibilitat i el bon funcionament en tots els dispositius.</p>
+                </article>
+            </main>
+
+            <aside class="side">
+                <h3>Enllaços ràpids</h3>
+                <ul>
+                    <li>Notícies recents</li>
+                    <li>Articles destacats</li>
+                    <li>Categories populars</li>
+                    <li>Contacte directe</li>
+                    <li>Xarxes socials</li>
+                    <li>Política de privacitat</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>

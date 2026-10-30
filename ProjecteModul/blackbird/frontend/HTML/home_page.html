@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | BlackBird</title>
+  <link rel="stylesheet" href="Styles/generalStyles.css" />
+  <link rel="stylesheet" href="Styles/homeStyles.css" />
+</head>
+<body>
+
+<main>
+  <section class="publication">
+    <form class="inputs" id="createPost">
+      <div class="text-fields">
+        <input type="text" id="postTitle" placeholder="Title your idea" maxlength="255" required/>
+        <textarea id="postBody" placeholder="What's on your mind?" rows="2" required></textarea>
+      </div>
+      <button type="submit" id="postButton">Post</button>
+    </form>
+  </section>
+
+  <section class="last-posts"></section>
+</main>
+
+  <script src="JS/left-bar.js"></script>
+  <script src="JS/right-bar.js"></script>
+  <script src="JS/posts.js"></script>
+  <script src="JS/theme.js"></script>
+
+  
+</body>
+</html>

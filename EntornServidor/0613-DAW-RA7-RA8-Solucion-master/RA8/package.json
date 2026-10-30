@@ -1,0 +1,19 @@
+{
+  "name": "ra8-notes-manager-solucio",
+  "version": "1.0.0",
+  "description": "Gestor de Notes - SOLUCIÓ DAW RA8 (Node + Express + EJS)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "jest --verbose"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

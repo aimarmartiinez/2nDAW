@@ -1,0 +1,64 @@
+/* Profile Page Styles */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.user-info h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.description {
+  margin: var(--spacing-sm) 0;
+  font-weight: lighter;
+  color: var(--colorText);
+}
+
+.stats {
+  margin: var(--spacing-md) 0;
+  color: var(--colorText);
+}
+
+.stats span {
+  margin-right: var(--spacing-lg);
+}
+
+.profile-tabs {
+  margin-top: var(--spacing-lg);
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  padding: 10px var(--spacing-lg);
+  cursor: pointer;
+  color: var(--colorText);
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--secondaryColor);
+  color: var(--secondaryColor);
+}
+
+.edit-profile-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  background-color: var(--primaryColor);
+  border: none;
+  height: 2rem;
+}
+
+.user-posts {
+  padding: var(--spacing-lg);
+}
+
+.user-posts .post {
+  background: var(--bgColor);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-light);
+}

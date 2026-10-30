@@ -1,0 +1,836 @@
+{
+  "grups": [
+    {
+      "id": "1",
+      "nom": "Família",
+      "color": "#ff0000"
+    },
+    {
+      "id": "2",
+      "nom": "Amics",
+      "color": "#44ff00"
+    },
+    {
+      "id": "3",
+      "nom": "Treball",
+      "color": "#002fff"
+    }
+  ],
+  "contactes": [
+    {
+      "id": "2",
+      "nom": "David",
+      "cognoms": "Sanchez Mora",
+      "telefon": "+34610163982",
+      "email": "davidclase@gmail.com",
+      "grupId": "2",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "3",
+      "nom": "Mohamed",
+      "cognoms": "Dukuray Waggeh",
+      "telefon": "+34691870624",
+      "email": "mohaclase@gmail.com",
+      "grupId": "2",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "4",
+      "nom": "Joel",
+      "cognoms": "Santos López",
+      "telefon": "+34670375927",
+      "email": "joelclase@gmail.com",
+      "grupId": "2",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "5",
+      "nom": "Carlos",
+      "cognoms": "Heredia Serrano",
+      "telefon": "+34614458487",
+      "email": "carlosclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "6",
+      "nom": "Martí",
+      "cognoms": "Gubern Sans",
+      "telefon": "+34789144871",
+      "email": "marticlase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "7",
+      "nom": "Sergio",
+      "cognoms": "Martos Gonzalez",
+      "telefon": "+34654316569",
+      "email": "sergioclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "8",
+      "nom": "Andrea",
+      "cognoms": "Escolar",
+      "telefon": "+34655861753",
+      "email": "andreaclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "9",
+      "nom": "Xavi",
+      "cognoms": "Lopez",
+      "telefon": "+34681533993",
+      "email": "xaviclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "10",
+      "nom": "Ariadna",
+      "cognoms": "Zamora",
+      "telefon": "+34695563708",
+      "email": "ariadnaclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "11",
+      "nom": "Lucas",
+      "cognoms": "Toro",
+      "telefon": "+34682579762",
+      "email": "lucasclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "12",
+      "nom": "Rafa",
+      "cognoms": "Martinez",
+      "telefon": "+34654394154",
+      "email": "[EMAIL_ADDRESS]",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "13",
+      "nom": "Adrian",
+      "cognoms": "Guerrero",
+      "telefon": "+34649787150",
+      "email": "adrianclase@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "14",
+      "nom": "Jordi",
+      "cognoms": "Valentin",
+      "telefon": "+34676124248",
+      "email": "jorditreball@gmail.com",
+      "grupId": "3",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "15",
+      "nom": "Albert",
+      "cognoms": "Milian",
+      "telefon": "+34668442427",
+      "email": "alberttreball@gmail.com",
+      "grupId": "3",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "16",
+      "nom": "Alex",
+      "cognoms": "Perez",
+      "telefon": "+34689822596",
+      "email": "alextreball@gmail.com",
+      "grupId": "3",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "17",
+      "nom": "Manu",
+      "cognoms": "Alvarez",
+      "telefon": "+34692081169",
+      "email": "manutreball@gmail.com",
+      "grupId": "3",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "18",
+      "nom": "Adam",
+      "cognoms": "",
+      "telefon": "+34601542791",
+      "email": "adam@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "19",
+      "nom": "Monsef",
+      "cognoms": "ElAttar",
+      "telefon": "+34748973207",
+      "email": "monsef@gmail.com",
+      "grupId": "2",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "20",
+      "nom": "Carla",
+      "cognoms": "Montesinos",
+      "telefon": "+34636576231",
+      "email": "carla@gmail.com",
+      "grupId": "2",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "21",
+      "nom": "AAPapa",
+      "cognoms": "null",
+      "telefon": "+34600082858",
+      "email": "papa@gmail.com",
+      "grupId": "1",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "23",
+      "nom": "AAtete",
+      "cognoms": "null",
+      "telefon": "+34607546044",
+      "email": "atete@gmail.com",
+      "grupId": "1",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "24",
+      "nom": "AAYaya",
+      "cognoms": "null",
+      "telefon": "+34656985862",
+      "email": "ayaya@gmail.com",
+      "grupId": "1",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "25",
+      "nom": "AAYayo",
+      "cognoms": "null",
+      "telefon": "+34650921535",
+      "email": "aayayo@gmail.com",
+      "grupId": "1",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "26",
+      "nom": "Tita eva",
+      "cognoms": "null",
+      "telefon": "+34660751968",
+      "email": "titaeva@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "27",
+      "nom": "tito carlos",
+      "cognoms": "null",
+      "telefon": "+34635455821",
+      "email": "titocarlos@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "28",
+      "nom": "tito jose",
+      "cognoms": "null",
+      "telefon": "+34632090574",
+      "email": "titojose@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "29",
+      "nom": "tito rafa",
+      "cognoms": "null",
+      "telefon": "+34616544405",
+      "email": "titorafa@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "30",
+      "nom": "tito julio",
+      "cognoms": "null",
+      "telefon": "+34616319415",
+      "email": "titojulio@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "31",
+      "nom": "tito alfonso",
+      "cognoms": "null",
+      "telefon": "+34751029357",
+      "email": "titoalfonso@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "32",
+      "nom": "tita juani",
+      "cognoms": "null",
+      "telefon": "+34619738398",
+      "email": "titajuani@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "33",
+      "nom": "tita rosa",
+      "cognoms": "null",
+      "telefon": "+34601992188",
+      "email": "titarosa@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "34",
+      "nom": "tita rita",
+      "cognoms": "null",
+      "telefon": "+34656305580",
+      "email": "titarita@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "35",
+      "nom": "tita Araceli",
+      "cognoms": "null",
+      "telefon": "+34660450981",
+      "email": "titaaraceli@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "36",
+      "nom": "tita dolores",
+      "cognoms": "null",
+      "telefon": "+34685553523",
+      "email": "titadolores@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "38",
+      "nom": "Primo Alex",
+      "cognoms": "null",
+      "telefon": "+34650175603",
+      "email": "primoalex@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "39",
+      "nom": "Primo Antonio",
+      "cognoms": "null",
+      "telefon": "+34650631551",
+      "email": "primoantonio@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "40",
+      "nom": "Primo jose luis",
+      "cognoms": "null",
+      "telefon": "+34657672392",
+      "email": "primojoseluis@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "41",
+      "nom": "primo david",
+      "cognoms": "null",
+      "telefon": "+34759942221",
+      "email": "primodavid@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "42",
+      "nom": "primo lucas",
+      "cognoms": "null",
+      "telefon": "+34631690987",
+      "email": "primolucas@gmail.com",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-01T10:00:00Z"
+    },
+    {
+      "nom": "Aimar",
+      "cognoms": "Martinez",
+      "telefon": "+3460130737328",
+      "email": "aimar.martinez.calzado@ibadia.cat",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-16T18:14:22.531Z",
+      "id": "4MpNWYwPVi8"
+    },
+    {
+      "nom": "aleix",
+      "cognoms": "",
+      "telefon": "+34722722722",
+      "email": "aleix@gmail.com",
+      "grupId": "2",
+      "favorit": true,
+      "foto": null,
+      "dataCreacio": "2026-05-17T09:35:10.367Z",
+      "id": "W8Bt6QR_W1Q"
+    },
+    {
+      "nom": "Iker",
+      "cognoms": "Lopez",
+      "telefon": "+34600000000",
+      "email": "aimar.martaainez.calzado@ibadia.cat",
+      "grupId": "1",
+      "favorit": false,
+      "foto": null,
+      "dataCreacio": "2026-05-21T13:56:59.211Z",
+      "id": "TTobGObkXPU"
+    }
+  ],
+  "historial": [
+    {
+      "id": "1",
+      "contacteId": "39",
+      "tipus": "email",
+      "data": "2026-05-04T11:27:22.145Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "2",
+      "contacteId": "32",
+      "tipus": "trucada",
+      "data": "2026-04-26T07:30:37.456Z",
+      "durada": 86
+    },
+    {
+      "id": "3",
+      "contacteId": "10",
+      "tipus": "email",
+      "data": "2026-05-06T08:23:12.725Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "4",
+      "contacteId": "31",
+      "tipus": "email",
+      "data": "2026-05-06T04:24:56.014Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "5",
+      "contacteId": "35",
+      "tipus": "email",
+      "data": "2026-04-28T02:39:27.471Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "6",
+      "contacteId": "11",
+      "tipus": "missatge",
+      "data": "2026-04-29T02:10:32.521Z",
+      "missatge": "D'acord"
+    },
+    {
+      "id": "7",
+      "contacteId": "6",
+      "tipus": "trucada",
+      "data": "2026-04-29T20:42:32.341Z",
+      "durada": 125
+    },
+    {
+      "id": "8",
+      "contacteId": "19",
+      "tipus": "missatge",
+      "data": "2026-05-04T21:41:07.424Z",
+      "missatge": "Ok"
+    },
+    {
+      "id": "9",
+      "contacteId": "6",
+      "tipus": "missatge",
+      "data": "2026-04-30T16:22:22.960Z",
+      "missatge": "Hola!"
+    },
+    {
+      "id": "10",
+      "contacteId": "36",
+      "tipus": "email",
+      "data": "2026-05-01T17:40:36.366Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "11",
+      "contacteId": "42",
+      "tipus": "email",
+      "data": "2026-05-06T14:55:19.692Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "12",
+      "contacteId": null,
+      "tipus": "email",
+      "data": "2026-05-01T03:21:41.707Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "13",
+      "contacteId": "5",
+      "tipus": "trucada",
+      "data": "2026-04-26T21:58:26.733Z",
+      "durada": 525
+    },
+    {
+      "id": "14",
+      "contacteId": "13",
+      "tipus": "trucada",
+      "data": "2026-05-05T02:51:48.410Z",
+      "durada": 273
+    },
+    {
+      "id": "15",
+      "contacteId": "23",
+      "tipus": "missatge",
+      "data": "2026-05-04T08:02:11.217Z",
+      "missatge": "Recorda portar el llibre"
+    },
+    {
+      "id": "16",
+      "contacteId": "31",
+      "tipus": "email",
+      "data": "2026-04-28T13:41:10.522Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "17",
+      "contacteId": "29",
+      "tipus": "trucada",
+      "data": "2026-04-27T07:07:58.272Z",
+      "durada": 328
+    },
+    {
+      "id": "18",
+      "contacteId": "15",
+      "tipus": "missatge",
+      "data": "2026-04-28T14:45:33.794Z",
+      "missatge": "Passa'm el link"
+    },
+    {
+      "id": "19",
+      "contacteId": "31",
+      "tipus": "email",
+      "data": "2026-05-06T16:36:04.087Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "20",
+      "contacteId": "16",
+      "tipus": "missatge",
+      "data": "2026-05-06T06:42:54.161Z",
+      "missatge": "Has fet l'activitat?"
+    },
+    {
+      "id": "21",
+      "contacteId": "36",
+      "tipus": "trucada",
+      "data": "2026-05-01T17:18:31.410Z",
+      "durada": 134
+    },
+    {
+      "id": "22",
+      "contacteId": "12",
+      "tipus": "trucada",
+      "data": "2026-05-05T02:38:43.296Z",
+      "durada": 372
+    },
+    {
+      "id": "23",
+      "contacteId": null,
+      "tipus": "trucada",
+      "data": "2026-05-01T12:30:43.122Z",
+      "durada": 418
+    },
+    {
+      "id": "24",
+      "contacteId": "35",
+      "tipus": "email",
+      "data": "2026-05-01T13:34:34.366Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "25",
+      "contacteId": "4",
+      "tipus": "trucada",
+      "data": "2026-04-29T12:04:57.843Z",
+      "durada": 373
+    },
+    {
+      "id": "26",
+      "contacteId": "25",
+      "tipus": "missatge",
+      "data": "2026-04-28T18:45:06.851Z",
+      "missatge": "Hola!"
+    },
+    {
+      "id": "27",
+      "contacteId": "5",
+      "tipus": "email",
+      "data": "2026-04-26T21:02:37.144Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "28",
+      "contacteId": "11",
+      "tipus": "trucada",
+      "data": "2026-05-01T10:08:06.477Z",
+      "durada": 49
+    },
+    {
+      "id": "29",
+      "contacteId": "2",
+      "tipus": "trucada",
+      "data": "2026-05-06T13:52:18.384Z",
+      "durada": 430
+    },
+    {
+      "id": "30",
+      "contacteId": "4",
+      "tipus": "trucada",
+      "data": "2026-05-01T04:08:48.898Z",
+      "durada": 201
+    },
+    {
+      "id": "31",
+      "contacteId": "32",
+      "tipus": "trucada",
+      "data": "2026-04-26T17:25:10.021Z",
+      "durada": 538
+    },
+    {
+      "id": "32",
+      "contacteId": "19",
+      "tipus": "email",
+      "data": "2026-05-04T00:07:41.655Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "33",
+      "contacteId": "3",
+      "tipus": "trucada",
+      "data": "2026-05-04T18:36:57.528Z",
+      "durada": 100
+    },
+    {
+      "id": "34",
+      "contacteId": "20",
+      "tipus": "missatge",
+      "data": "2026-05-07T16:01:10.368Z",
+      "missatge": "Hola!"
+    },
+    {
+      "id": "35",
+      "contacteId": "3",
+      "tipus": "email",
+      "data": "2026-05-02T03:12:58.332Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "36",
+      "contacteId": "8",
+      "tipus": "email",
+      "data": "2026-05-01T11:23:12.314Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "37",
+      "contacteId": "32",
+      "tipus": "trucada",
+      "data": "2026-05-01T13:45:10.722Z",
+      "durada": 300
+    },
+    {
+      "id": "38",
+      "contacteId": "35",
+      "tipus": "email",
+      "data": "2026-05-05T16:15:44.572Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "39",
+      "contacteId": "10",
+      "tipus": "trucada",
+      "data": "2026-04-30T10:07:38.097Z",
+      "durada": 360
+    },
+    {
+      "id": "40",
+      "contacteId": "40",
+      "tipus": "missatge",
+      "data": "2026-04-30T23:41:24.975Z",
+      "missatge": "Hola!"
+    },
+    {
+      "id": "41",
+      "contacteId": "26",
+      "tipus": "missatge",
+      "data": "2026-05-01T19:16:52.937Z",
+      "missatge": "Ok"
+    },
+    {
+      "id": "42",
+      "contacteId": "4",
+      "tipus": "missatge",
+      "data": "2026-05-06T12:34:03.903Z",
+      "missatge": "Recorda portar el llibre"
+    },
+    {
+      "id": "43",
+      "contacteId": "25",
+      "tipus": "missatge",
+      "data": "2026-05-02T08:47:00.185Z",
+      "missatge": "Passa'm el link"
+    },
+    {
+      "id": "44",
+      "contacteId": "26",
+      "tipus": "trucada",
+      "data": "2026-04-27T13:08:30.016Z",
+      "durada": 464
+    },
+    {
+      "id": "45",
+      "contacteId": "28",
+      "tipus": "trucada",
+      "data": "2026-05-07T06:29:31.943Z",
+      "durada": 344
+    },
+    {
+      "id": "46",
+      "contacteId": "7",
+      "tipus": "email",
+      "data": "2026-05-04T11:44:25.974Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "47",
+      "contacteId": "32",
+      "tipus": "email",
+      "data": "2026-04-26T12:20:39.703Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    },
+    {
+      "id": "48",
+      "contacteId": "2",
+      "tipus": "missatge",
+      "data": "2026-04-26T11:17:45.086Z",
+      "missatge": "D'acord"
+    },
+    {
+      "id": "49",
+      "contacteId": "11",
+      "tipus": "missatge",
+      "data": "2026-04-30T00:24:29.468Z",
+      "missatge": "Ok"
+    },
+    {
+      "id": "50",
+      "contacteId": "10",
+      "tipus": "email",
+      "data": "2026-04-27T08:28:09.463Z",
+      "missatge": "Assumpte: Seguiment del projecte..."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

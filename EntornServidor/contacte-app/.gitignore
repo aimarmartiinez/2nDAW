@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Fitxers de configuració locals
+.env
+
+# Logs
+*.log
+
+# Fitxers del sistema
+.DS_Store

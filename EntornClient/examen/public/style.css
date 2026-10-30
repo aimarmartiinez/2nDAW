@@ -1,0 +1,313 @@
+body{
+    background-color: gray;
+}
+.contingut {
+    width:650px;
+    margin: auto;
+    padding: 15px 15px;
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    text-align: center;
+    margin: 30px;
+    border-bottom: solid 1px black;
+}
+
+.menu ul {
+    list-style: none;
+    height: 10px;
+    padding-left: 0;
+}
+
+.menu ul li {
+    float: left;
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.70em;
+}
+article{
+    display: none;
+}
+
+main article:target{
+    display: block;
+}
+
+#resultatEx1{
+    background-color:lightyellow;
+    display: inline-block;
+    width: 150px;
+    padding: 3px;
+    text-align: center;
+
+}
+.resultatPedra{
+    vertical-align: middle;
+    text-align: center;
+    margin: 0.1px;
+    padding: 0.1px;
+    background-color:lightyellow;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    text-align: center;
+}
+
+.resultatEx4{
+    margin-top: 5px;
+    background-color:lightyellow;
+    min-height: 30px;
+    min-width: 200px;
+}
+.exemple{
+    color: grey;
+}
+.inline{
+    display: inline-block;
+}
+
+.select{
+    background-color: lightyellow;
+}
+
+.select tr td{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+}
+
+.pink{
+    background-color: pink !important;
+}
+.purple{
+    background-color: purple !important;
+}
+.yellow{
+    background-color: yellow !important;
+}
+.aquamarine{
+    background-color:aquamarine !important;
+}
+.red{
+    background-color: red !important;
+}
+.orange{
+    background-color: orange !important;
+}
+.blue{
+    background-color: blue !important;
+    color: white;
+}
+
+.fuchsia{
+    background-color: fuchsia !important;
+}
+.green{
+    background-color: green !important;
+}
+
+.important{
+    color:red;
+}
+
+.veicle{
+    width:210px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.veicle input{
+    width: 150px;
+}
+
+#memory-board{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 600px;
+
+}
+#memory-board > div{
+    display: flex;
+}
+#memory-board > div > div{
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    background-size: cover;
+    background-image: url('img/animals/carta.png');
+}
+#memory-board div.elefant.show{
+    background-image: url('img/animals/elefant.png');
+    
+}
+#memory-board div.hipopotam.show{
+    background-image: url('img/animals/hipopotam.png');
+    
+}
+#memory-board div.jirafa.show{
+    background-image: url('img/animals/jirafa.png');
+    
+}
+#memory-board div.koala.show{
+    background-image: url('img/animals/koala.png');
+    
+}
+#memory-board div.mico.show{
+    background-image: url('img/animals/mico.png');
+    
+}
+#memory-board div.os-gris.show{
+    background-image: url('img/animals/os-gris.png');
+    
+}
+#memory-board div.os.show{
+    background-image: url('img/animals/os.png');
+    
+}
+#memory-board div.panda.show{
+    background-image: url('img/animals/panda.png');
+    
+}
+#memory-board div.elefant.show{
+    background-image: url('img/animals/elefant.png');
+    
+}
+
+.cerca{
+    width:210px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.board{
+    border-collapse: collapse;
+}
+
+.board td {
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border: 1px solid gray;
+}
+.seleccionat{
+    border: 4px solid black;
+}
+
+.ex1-error{
+    border: 2px solid red;
+}
+.ex1-valid{
+    border: 2px solid lime;
+}
+
+.exemplesColors{
+    display: flex;
+    align-items: center;
+}
+.exemplesColors div{
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+}
+
+#candy-table > div{
+    display: flex;
+}
+#candy-table > div > div{
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    background-size: cover;
+    background-color: inherit !important;
+}
+#candy-table .blue{
+    background-image: url(img/blue-candy.png);
+}
+#candy-table .green{
+    background-image: url(img/green-candy.png);
+}
+#candy-table .orange{
+    background-image: url(img/orange-candy.png);
+}
+#candy-table .purple{
+    background-image: url(img/purple-candy.png);
+}
+#candy-table .red{
+    background-image: url(img/red-candy.png);
+}
+#candy-table .yellow{
+    background-image: url(img/yellow-candy.png);
+}
+#candy-table .join-candy{
+    margin: 0px;
+    border: 2px red dotted;
+    border-radius: 10px;
+}
+
+#tic-tac-toe, #sum-numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 6px;
+    margin-top: 10px;
+}
+
+#tic-tac-toe .ttt-cell, #sum-numbers .ttt-cell{
+    background-color: lightyellow;
+    border: 2px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+#tic-tac-toe .ttt-cell:hover{
+    background-color: #fff8b2;
+}
+
+#puzzle-board{
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 6px;
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #444;
+    width: fit-content;
+}
+
+#puzzle-board .puzzle-tile{
+    background-color: #ffe28a;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+#puzzle-board .puzzle-tile.empty{
+    background-color: #d9d9d9;
+    border-style: dashed;
+    cursor: default;
+}
+
+#ex7-result{
+    margin-top: 10px;
+    min-height: 22px;
+    font-weight: bold;
+}

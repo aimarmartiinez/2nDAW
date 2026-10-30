@@ -1,0 +1,107 @@
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .close-btn {
+  background: none;
+  font-size: var(--text-md);
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.modal-header .close-btn:hover {
+  background: var(--color-danger);
+  color:#ffffff;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.modal-content label {
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.modal-footer button {
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.modal-footer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.modal-footer button:disabled:hover {
+  filter: none;
+}
+
+.modal-footer .save-btn {
+  background-color: var(--color-success);
+  color: #ffffff;
+}
+
+.modal-footer .save-btn:hover {
+  background-color: var(--color-success-hover);
+}
+
+.modal-footer .cancel-btn {
+  background-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.modal-footer .cancel-btn:hover {
+  background-color: var(--color-danger-hover);
+}
+
+#modal.hidden {
+  display: none;
+}

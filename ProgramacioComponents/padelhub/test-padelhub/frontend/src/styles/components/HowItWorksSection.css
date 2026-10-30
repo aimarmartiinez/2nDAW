@@ -1,0 +1,69 @@
+/* ===== HOW IT WORKS ===== */
+.how-it-works {
+    padding: 120px 0;
+    background-color: #f8fafc;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 0 8px #f1f5f9;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -50%;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right, var(--color-primary-dark) 50%, transparent 50%);
+    background-size: 20px 100%;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+@media (max-width: 992px) {
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .step:not(:last-child)::after {
+        right: 25%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .step:not(:last-child)::after {
+        display: none;
+    }
+}

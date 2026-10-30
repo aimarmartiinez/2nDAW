@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+  body{
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas:
+      "header header header"
+      "menu main main2"
+      "menu footer footer2";
+      gap: 2px;
+  }
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgrey;
+  }
+  .header{
+    grid-area: header;
+  }
+  .menu{
+    grid-area: menu;
+  }
+  .main{
+    grid-area: main;
+  }
+  .main2{
+    grid-area: main2;
+  }
+  .footer{
+    grid-area: footer;
+  }
+  .footer2{
+    grid-area: footer2;
+  }
+</style>
+<body>
+    <div class="header">celda 1</div>
+    <div class="header">celda 1</div>
+    <div class="menu">celda 2</div>
+    <div class="main">celda 3</div>
+    <div class="main2">celda 4</div>
+    <div class="footer">celda 5</div>
+    <div class="footer2">celda 6</div>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+html {
+  /* Activa el desplaçament suau per a les àncores (#inici, #about-me, etc.) */
+  scroll-behavior: smooth;
+  /* Evitem que la pàgina es mogui cap als costats */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Assegurem que el cos pugui fer scroll */
+  overflow-y: auto;
+}

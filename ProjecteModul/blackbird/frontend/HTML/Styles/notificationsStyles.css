@@ -1,0 +1,36 @@
+/* Notifications Page Styles */
+.notifications-section h2 {
+  margin-bottom: var(--spacing-lg);
+  
+}
+.notification-item {
+  background: var(--bgColor);
+  padding: var(--spacing-lg);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-light);
+  position: relative;
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  gap: 1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.notification-item img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--spacing-xs);
+}
+
+.notification-item .time {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: var(--font-size-small);
+  font-weight: lighter;
+  color: var(--colorText);
+}
+
+.notification-item h3 a{
+  text-decoration: none;
+  color: var(--colorText);
+}

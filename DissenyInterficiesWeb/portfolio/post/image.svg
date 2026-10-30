@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="627" viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050508"/>
+      <stop offset="40%" style="stop-color:#264DE4"/>
+      <stop offset="100%" style="stop-color:#000000"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E44D26"/>
+      <stop offset="50%" style="stop-color:#FF3366"/>
+      <stop offset="100%" style="stop-color:#FFD23F"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  <rect width="1200" height="627" fill="url(#grid)"/>
+  <!-- Diagonal accent -->
+  <polygon points="0,0 420,0 0,280" fill="#E44D26" opacity="0.12"/>
+  <polygon points="1200,627 780,627 1200,347" fill="#FF3366" opacity="0.1"/>
+  <!-- Giant watermark emoji -->
+  <text x="1020" y="200" font-size="200" opacity="0.15" text-anchor="middle">📊</text>
+  <!-- Top badge -->
+  <rect x="340" y="28" width="520" height="44" rx="22" fill="url(#neon)" filter="url(#glow)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#0D0D12" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="900" letter-spacing="2">MI MARCA PERSONAL</text>
+  <!-- Subtitle -->
+  <text x="600" y="105" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="4">M09 · UI/UX · 2n DAW</text>
+  <text x="600" y="155" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">PORTFOLIO</text>
+<text x="600" y="217" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">PERSONAL</text>
+<text x="600" y="279" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">(REACT)</text>
+  <!-- Hook line -->
+  <text x="600" y="364" text-anchor="middle" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">↓ GUÁRDALO · COMPARTE · APLICA ↓</text>
+  
+  <rect x="80" y="376" width="1040" height="72" rx="18" fill="#0D0D12" stroke="#FF3366" stroke-width="3"/>
+  <rect x="80" y="376" width="8" height="72" rx="4" fill="#FF3366"/>
+  <rect x="100" y="390" width="72" height="28" rx="14" fill="#FF3366"/>
+  <text x="136" y="410" text-anchor="middle" fill="#0D0D12" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="900">CLAVE</text>
+  <text x="190" y="420" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">SPA con React Router</text>
+  <text x="1080" y="422" text-anchor="end" fill="#FF3366" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="900">01</text>
+
+  <rect x="80" y="462" width="1040" height="72" rx="18" fill="#0D0D12" stroke="#FF6B35" stroke-width="3"/>
+  <rect x="80" y="462" width="8" height="72" rx="4" fill="#FF6B35"/>
+  <rect x="100" y="476" width="72" height="28" rx="14" fill="#FF6B35"/>
+  <text x="136" y="496" text-anchor="middle" fill="#0D0D12" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="900">INSIGHT</text>
+  <text x="190" y="506" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Componentización de UI</text>
+  <text x="1080" y="508" text-anchor="end" fill="#FF6B35" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="900">02</text>
+
+  <rect x="80" y="548" width="1040" height="72" rx="18" fill="#0D0D12" stroke="#FFD23F" stroke-width="3"/>
+  <rect x="80" y="548" width="8" height="72" rx="4" fill="#FFD23F"/>
+  <rect x="100" y="562" width="72" height="28" rx="14" fill="#FFD23F"/>
+  <text x="136" y="582" text-anchor="middle" fill="#0D0D12" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="900">SKILL</text>
+  <text x="190" y="592" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Presentación profesional del trabajo académico</text>
+  <text x="1080" y="594" text-anchor="end" fill="#FFD23F" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="900">03</text>
+  <rect x="80" y="548" width="180" height="36" rx="18" fill="#E44D26" fill-opacity="0.2" stroke="#E44D26" stroke-width="1.5"/>
+  <text x="170" y="572" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">TypeScript</text>
+<rect x="275" y="548" width="180" height="36" rx="18" fill="#E44D26" fill-opacity="0.2" stroke="#E44D26" stroke-width="1.5"/>
+  <text x="365" y="572" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">React</text>
+<rect x="470" y="548" width="180" height="36" rx="18" fill="#E44D26" fill-opacity="0.2" stroke="#E44D26" stroke-width="1.5"/>
+  <text x="560" y="572" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Vite</text>
+<rect x="665" y="548" width="180" height="36" rx="18" fill="#E44D26" fill-opacity="0.2" stroke="#E44D26" stroke-width="1.5"/>
+  <text x="755" y="572" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Bootstrap</text>
+  <!-- Corner stamp -->
+  <circle cx="1120" cy="520" r="50" fill="none" stroke="#E44D26" stroke-width="3" stroke-dasharray="6 4" opacity="0.6"/>
+  <text x="1120" y="515" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">DEV</text>
+  <text x="1120" y="532" text-anchor="middle" fill="#E44D26" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">DAW</text>
+</svg>

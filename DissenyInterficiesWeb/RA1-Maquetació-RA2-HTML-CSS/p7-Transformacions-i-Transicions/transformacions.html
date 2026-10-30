@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformacions</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    h1 {
+        margin: 10px;
+    }
+    .redContainer, .blueContainer{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    .redContainer{
+        background-color: red;
+        transition: width 2s;
+    }
+    .redContainer:hover {
+        width: 300px;
+    }   
+    .blueContainer{
+        background-color: blue;
+    }
+    .redContainer + .blueContainer {
+        transition-property: width;
+        transition-duration: 2s;
+        transition-delay: 2s;
+        
+    }
+    .redContainer:hover + .blueContainer {
+        width: 300px;
+    }
+    .grayContainer {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(to bottom, rgb(78, 77, 77), rgb(152, 152, 152));
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        padding: 3px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        img:hover {
+            transform: scale(1.2) translateY(-10px);
+            transition: transform 1.5s;        
+        }
+    }
+    .ex4 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:20px;
+        .coralContainer{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+        }
+        .greenContainer{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: green;
+        }
+        .darkblueContainer{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: darkblue;
+        }
+        
+    }
+    .ex4:hover{
+        .coralContainer {
+            transform: rotate(360deg);
+            transition: transform 20s;
+        }
+        .greenContainer {
+            transform: rotate(360deg);
+            transition: transform 10s;
+        }
+        .darkblueContainer {
+            transform: rotate(360deg);
+            transition: transform 5s;
+        }
+    }
+
+    .ex5 {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        h2 {
+            position: absolute;
+            color: black;
+            font-size: 20px;
+            z-index: -999;
+        }
+        .redContainer, .yellowContainer, .greenContainer, .darkblueContainer{
+            position: absolute;
+            width: 100px;
+            height: 100px;            
+        }
+        .redContainer{
+            left: 0;
+            top: 0;
+            background-color: red;            
+        }
+        .yellowContainer{
+            right: 0;
+            top: 0;
+            background-color: yellow;            
+        }
+        .greenContainer{
+            right: 0;
+            bottom: 0;
+            background-color: green;            
+        }
+        .darkblueContainer{
+            left: 0;
+            bottom: 0;
+            background-color: darkblue;            
+        }        
+    }
+    .ex5:hover{
+        .redContainer {
+            transform: translateX(-100%) rotate(-90deg) ;
+            transition: transform 2s;
+        }
+        .yellowContainer {
+            transform: translateX(100%) rotate(90deg) ;
+            transition: transform 2s;
+        }
+        .greenContainer {
+            transform: translateX(100%) rotate(-90deg) ;
+            transition: transform 2s;
+        }
+        .darkblueContainer {
+            transform: translateX(-100%) rotate(90deg) ;
+            transition: transform 2s;
+        }
+    }
+    
+</style>    
+<body>
+    <h1>Exercici 1</h1>
+    <div class="redContainer"></div>
+    
+    <h1>Exercici 2</h1>
+    <div class="redContainer"></div>
+    <div class="blueContainer"></div>
+    
+    <h1>Exercici 3</h1>
+    <div class="grayContainer">
+        <img src="messi.png" />
+    </div>
+    <h1>Exercici 4</h1>
+    <div class="ex4">
+        <div class="coralContainer"></div>
+        <div class="greenContainer"></div>
+        <div class="darkblueContainer"></div>
+    </div>
+    <h1>Exercici 5</h1>
+    <div class="ex5">
+        <div class="redContainer"></div>
+        <div class="yellowContainer"></div>
+        <div class="greenContainer"></div>
+        <div class="darkblueContainer"></div>
+        <h2>Hi!</h2>
+    </div>
+</body>
+</html>

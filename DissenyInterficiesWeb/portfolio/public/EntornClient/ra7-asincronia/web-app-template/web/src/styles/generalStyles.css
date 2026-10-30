@@ -1,0 +1,99 @@
+/* Normalización */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables globales */
+:root {
+  /* Colores */
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --color-border: #dddddd;
+  --color-primary: rgb(44, 92, 44);
+  --color-accent: #3498db;
+  --color-accent-hover: #2980b9;
+  --color-danger: #e74c3c;
+  --color-danger-hover: #c0392b;
+  --color-success: #2ecc71;
+  --color-success-hover: #27ae60;
+
+  /* Espaciados */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 40px;
+
+  /* Fuentes */
+  --font-sans: Arial, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Tamaños */
+  --text-sm: 0.9rem;
+  --text-md: 1rem;
+  --text-lg: 1.5rem;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Layout */
+  --header-height: 10vh;
+  --footer-height: 8vh;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+}
+
+header h1 {
+  font-size: var(--text-lg);
+}
+
+main {
+  width: 80vw;
+  margin-top: var(--space-6);
+}
+
+footer {
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  font-size: var(--text-sm);
+}
+
+.hidden {
+  display: none;
+}

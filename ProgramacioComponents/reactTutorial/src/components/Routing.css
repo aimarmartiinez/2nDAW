@@ -1,0 +1,13 @@
+.routing {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.routing h2 {
+  color: #333;
+}
+
+.routing p {
+  margin-bottom: 10px;
+}

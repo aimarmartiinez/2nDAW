@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1 Caixes</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .First{
+        background-color: fuchsia;
+        color: white;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 20px;
+        left: 70px;
+        z-index: 2;
+        opacity: 0.9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Second{
+        background-color: blue;
+        color: white;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 190px;
+        z-index: 3;
+        opacity: 0.9;
+    }
+    .Third{
+        background-color: green;
+        color: white;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 200px;
+        left: 130px;
+        z-index: 1;
+        opacity: 0.9;
+    }
+</style>
+<body>
+    <div class="First">
+        <p>First</p>
+    </div>
+    <div class="Second">
+        <p>Second</p>
+    </div>
+    <div class="Third">
+        <p>Third</p>
+    </div>
+</body>
+</html>

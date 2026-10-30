@@ -1,0 +1,9 @@
+/* Landing page global styles */
+@import url('./components/Header.css');
+@import url('./components/HeroSection.css');
+@import url('./components/FeaturesSection.css');
+@import url('./components/HowItWorksSection.css');
+@import url('./components/UserTypesSection.css');
+@import url('./components/ValuesSection.css');
+@import url('./components/CTASection.css');
+@import url('./components/Footer.css');

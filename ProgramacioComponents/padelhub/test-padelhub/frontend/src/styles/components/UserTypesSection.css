@@ -1,0 +1,76 @@
+/* ===== USER TYPES ===== */
+.user-types {
+    padding: 120px 0;
+    background: var(--color-white);
+}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.user-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--color-white);
+    border: 1px solid #e2e8f0;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.user-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.user-header {
+    padding: 40px 30px;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.user-card:nth-child(1) .user-header {
+    background: var(--color-primary-dark);
+}
+
+.user-card:nth-child(2) .user-header {
+    background: var(--color-secondary-dark);
+}
+
+.user-header h3 {
+    color: var(--color-white);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.user-body {
+    padding: 40px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-features {
+    margin-top: auto;
+}
+
+.user-features li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: var(--color-text-main);
+    font-size: 1rem;
+}
+
+.user-features li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-medium2);
+}

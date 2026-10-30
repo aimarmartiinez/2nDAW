@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <%- include('partials/header', { title }) %>
+
+  <main class="dashboard">
+    <section class="card">
+      <h2>Usuarios</h2>
+      <p class="metric"><%= stats.users %></p>
+    </section>
+    <section class="card">
+      <h2>Productos</h2>
+      <p class="metric"><%= stats.products %></p>
+    </section>
+    <section class="card">
+      <h2>Precio medio</h2>
+      <p class="metric"><%= stats.avgPrice.toFixed(2) %> EUR</p>
+    </section>
+  </main>
+
+  <main class="charts">
+    <section class="card">
+      <h2>Distribucion de productos por categoria</h2>
+      <div class="chart-box">
+        <canvas id="categoriesChart"></canvas>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Top 5 productos (precio)</h2>
+      <div class="chart-box">
+        <canvas id="topProductsChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script id="stats-data" type="application/json"><%- JSON.stringify(stats) %></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

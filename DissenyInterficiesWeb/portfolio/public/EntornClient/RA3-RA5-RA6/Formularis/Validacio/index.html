@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulari de registre</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>Accedeix a tot</h1>
+    <p>Crea un compte gratuït per accedir al contingut exclusiu</p>
+
+    <form id="signup-form">
+      <input type="email" id="email" placeholder="Introdueix el teu correu" required />
+      <input type="password" id="password" placeholder="Contrasenya" required />
+
+      <ul id="password-requirements">
+        <li id="length"><span class="dot">x</span>Més de 8 caràcters</li>
+        <li id="number"><span class="dot">x</span>1 número</li>
+        <li id="special"><span class="dot">x</span>1 caràcter especial</li>
+        <li id="case"><span class="dot">x</span>Majúscula i minúscula</li>
+      </ul>
+
+      <button type="submit" id="send">Registra't</button>
+      <button type="button" class="google-btn">Continua amb Google</button>
+    </form>
+  </div>
+
+  <script type="module" src="src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+  color: #262626;
+  background-color: #ececec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.layout {
+  width: min(860px, 94vw);
+  margin: 36px auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.subtitle {
+  margin: 10px 0 24px;
+  color: #5a5a5a;
+}
+
+.post-list {
+  border: 1px solid #d7d7d7;
+  background-color: #fdfdfd;
+}
+
+.post-card {
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.post-card:last-child {
+  border-bottom: 0;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #d3d3d3;
+  flex-shrink: 0;
+  background-color: #fff;
+}
+
+.content {
+  min-width: 0;
+}
+
+.author {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.title {
+  margin: 2px 0 8px;
+  color: #555;
+  font-weight: 600;
+}
+
+.body {
+  margin: 0;
+  color: #464646;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 14px 0 0;
+  color: #8a8a8a;
+  font-size: 0.92rem;
+}
+
+.comment-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #a8a8a8;
+  border-radius: 50%;
+  font-size: 9px;
+}
+
+.status {
+  margin: 0;
+  padding: 24px;
+  color: #616161;
+}
+
+.status.error {
+  color: #b02424;
+}
+
+@media (max-width: 650px) {
+  .post-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .author {
+    font-size: 1.1rem;
+  }
+}

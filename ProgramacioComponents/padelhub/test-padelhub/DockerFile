@@ -1,0 +1,37 @@
+# Imagen base con PHP 8.4 FPM
+FROM php:8.4-fpm
+
+# Instalar dependencias necesarias de PHP y del sistema
+RUN apt-get update && apt-get install -y \
+    libonig-dev \
+    libzip-dev \
+    libicu-dev \
+    zip \
+    unzip \
+    git \
+    curl \
+    libxml2-dev \
+    mariadb-client \
+    && docker-php-ext-install mbstring pdo_mysql bcmath xml zip intl
+
+# Instalar Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Directorio de trabajo dentro del contenedor
+WORKDIR /var/www/html
+
+# Copiar todo el proyecto al contenedor
+COPY . . 
+
+# Instalar dependencias de Laravel
+RUN composer install --optimize-autoloader
+
+# Ajustar permisos para Laravel
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Exponer puerto de PHP-FPM
+EXPOSE 9000
+
+# Comando para iniciar PHP-FPM
+CMD ["php-fpm"]

@@ -1,0 +1,38 @@
+.create-btn{
+  margin-bottom: 5px;
+}
+.create-btn, .edit-btn, .delete-btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.create-btn, .edit-btn {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.create-btn, .edit-btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.create-btn, .edit-btn:active {
+  transform: scale(0.95);
+}
+
+.delete-btn {
+  background-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  background-color: var(--color-danger-hover);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+

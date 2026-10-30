@@ -1,0 +1,51 @@
+/* Messages Page Styles */
+main{
+  padding: 0px;
+}
+.messages-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+}
+
+.conversations-list {
+  border-right: 1px solid var(--borderColor);
+  padding: var(--spacing-lg);
+}
+input{
+  margin-bottom: var(--spacing-md);
+  color: var(--textColor);
+}
+.conversation {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--borderColor);
+  cursor: pointer;
+}
+
+.conversation:hover {
+  background: var(--bgColor);
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+  h1{
+    margin: var(--spacing-md);
+    color: var(--secondaryColor);
+  }
+}
+
+
+.new-message-btn {
+  background: var(--primaryColor);
+  color: #111827;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  margin-top: var(--spacing-lg);
+}

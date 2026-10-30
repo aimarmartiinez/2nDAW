@@ -1,0 +1,19 @@
+/* Home page global styles */
+@import url('./components/AppHeader.css');
+@import url('./components/SearchHero.css');
+@import url('./components/ClubListHeader.css');
+@import url('./components/ClubCard.css');
+
+/* ===== HOME CONTENT ===== */
+.home-container {
+    max-width: 1400px;
+    margin: -60px auto 60px;
+    padding: 0 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}

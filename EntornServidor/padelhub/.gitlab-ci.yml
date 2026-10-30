@@ -1,0 +1,119 @@
+stages:
+  - deploy
+
+deploy_production:
+
+  stage: deploy
+
+  only:
+    - tags
+
+  tags:
+    - runner
+
+  variables:
+    BASE: /var/www/padelhub
+    RELEASES: /var/www/padelhub/releases
+    SHARED: /var/www/padelhub/shared
+    CURRENT: /var/www/padelhub/current
+
+  script: |
+
+    set -e
+
+    echo "===== INIT DEPLOY ====="
+
+    sudo chmod -R 777 $BASE || true
+
+    mkdir -p $RELEASES
+    mkdir -p $SHARED/storage
+    mkdir -p $SHARED/storage/framework/cache
+    mkdir -p $SHARED/storage/framework/sessions
+    mkdir -p $SHARED/storage/framework/views
+    mkdir -p $SHARED/storage/logs
+    mkdir -p $SHARED/bootstrap-cache
+
+    chmod -R 777 $SHARED || true
+
+    if [ ! -f $SHARED/.env ]; then
+      cp .env.example $SHARED/.env
+    fi
+
+    RELEASE=$RELEASES/$CI_COMMIT_TAG
+
+    echo "===== CLONE ====="
+
+    rm -rf $RELEASE
+    git clone $CI_REPOSITORY_URL $RELEASE
+    cd $RELEASE
+    git checkout $CI_COMMIT_TAG
+
+    echo "===== SYMLINKS ====="
+
+    rm -rf storage
+
+    ln -sfn $SHARED/storage storage
+    ln -sfn $SHARED/.env .env
+
+    mkdir -p bootstrap/cache
+
+    chmod -R 777 storage bootstrap/cache || true
+
+    echo "===== BUILD ====="
+
+    composer install --no-dev --optimize-autoloader
+
+    npm install
+    npm run build
+
+    echo "===== LARAVEL ====="
+
+    php artisan key:generate --force || true
+
+    php artisan optimize:clear || true
+
+    php artisan config:cache || true
+    php artisan route:cache || true
+    php artisan view:cache || true
+
+    php artisan migrate --force || true
+
+    php artisan storage:link || true
+
+    php artisan about || exit 1
+
+    echo "===== ACTIVATE ====="
+
+    ln -sfn $RELEASE $CURRENT
+    chmod -R 777 $CURRENT || true
+
+    echo "===== ENSURE INFRA FILES IN BASE ====="
+
+    # Docker Compose
+    if [ ! -f $BASE/docker-compose.yml ]; then
+      echo "docker-compose.yml no existe en BASE, copiando desde CURRENT"
+      cp -f $CURRENT/docker-compose.yml $BASE/docker-compose.yml
+    fi
+
+    # Dockerfile
+    if [ ! -f $BASE/Dockerfile ]; then
+      echo "Dockerfile no existe en BASE, copiando desde CURRENT"
+      cp -f $CURRENT/Dockerfile $BASE/Dockerfile
+    fi
+
+    # Nginx
+    if [ ! -d $BASE/nginx ] || [ -z "$(ls -A $BASE/nginx 2>/dev/null)" ]; then
+      echo "nginx no existe o está vacío en BASE, copiando desde CURRENT"
+      rm -rf $BASE/nginx
+      cp -a $CURRENT/nginx $BASE/nginx
+    fi
+
+    echo "===== RESTART ====="
+
+    cd $BASE
+
+    docker-compose down || true
+    docker-compose up -d --build
+    docker-compose restart app
+
+    echo "===== DONE ====="

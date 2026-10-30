@@ -1,0 +1,109 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Contacte</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin: 6px 0 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+            outline: none;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #6c63ff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #5750d4;
+        }
+
+        div[style*="color:red"] {
+            font-size: 13px;
+            margin-top: -8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<form method="POST" action="/contacte">
+    <div>
+        <label>Nom</label>
+        <input type="text" name="nom" value="<%= values.nom || '' %>" required>
+        <div style="color:red;">
+            <%= errors.nom || '' %>
+        </div>
+    </div>
+
+    <div>
+        <label>Cognoms</label>
+        <input type="text" name="cognoms" value="<%= values.cognoms || '' %>" required>
+        <div style="color:red;">
+            <%= errors.cognoms || '' %>
+        </div>
+    </div>
+
+    <div>
+        <label>Telèfon</label>
+        <input type="text" name="telefon" value="<%= values.telefon || '' %>" required pattern="\d{9}">
+        <div style="color:red;">
+            <%= errors.telefon || '' %>
+        </div>
+    </div>
+
+    <div>
+        <label>Descripció</label>
+        <textarea name="descripcio" maxlength="250" required><%= values.descripcio || '' %></textarea>
+        <div style="color:red;">
+            <%= errors.descripcio || '' %>
+        </div>
+    </div>
+
+    <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,27 @@
+/* ===== VALUES ===== */
+.values {
+    padding: 100px 0;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 50px;
+}
+
+.value-item {
+    text-align: center;
+}
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--color-primary-medium2);
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 10px rgba(118, 215, 255, 0.4));
+}
+
+.values-title-fixed h2 {
+    color: var(--color-primary-light2);
+}

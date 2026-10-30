@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four in a Row</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(7, 60px);
+            gap: 5px;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conecta 4</h1>
+    <main>
+        <div id="board"></div>
+    </main>
+
+    <script>
+        const board = document.getElementById('board');
+        const rows = 6;
+        const cols = 7;
+        let currentPlayer = 'X';
+        let gameBoard = [];
+
+        // Initialize the game board
+        for (let row = 0; row < rows; row++) {
+            gameBoard[row] = [];
+            for (let col = 0; col < cols; col++) {
+                gameBoard[row][col] = '';
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.dataset.row = row;
+                cell.dataset.col = col;
+                cell.addEventListener('click', handleCellClick);
+                board.appendChild(cell);
+            }
+        }
+
+        function handleCellClick(event) {
+            const row = parseInt(event.target.dataset.row);
+            const col = parseInt(event.target.dataset.col);
+
+            // Check if the column is not full
+            if (gameBoard[0][col] === '') {
+                // Find the lowest empty row in the clicked column
+                let i;
+                for (i = rows - 1; i >= 0; i--) {
+                    if (gameBoard[i][col] === '') {
+                        gameBoard[i][col] = currentPlayer;
+                        updateBoard();
+                        checkForWin(i, col);
+                        switchPlayer();
+                        break;
+                    }
+                }
+            }
+        }
+
+        function updateBoard() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                const row = parseInt(cell.dataset.row);
+                const col = parseInt(cell.dataset.col);
+                cell.textContent = gameBoard[row][col];
+            });
+        }
+
+        function switchPlayer() {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+
+        function checkForWin(row, col) {
+            if (
+                checkHorizontals(row, col) >= 4 ||
+                checkVerticals(row, col) >= 4 ||
+                checkDiagonals(row, col) >= 4
+            ) {
+                alert("El ganador es: " + currentPlayer);
+            }
+        }
+
+        function checkHorizontals(row, col) {
+            let count = 1;
+
+            // Horizontal asc (derecha)
+            for (let i = col + 1; i < cols; i++) {
+                if (gameBoard[row][i] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            // Horizontal desc (izquierda)
+            for (let i = col - 1; i >= 0; i--) {
+                if (gameBoard[row][i] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            return count;
+        }
+
+        function checkVerticals(row, col) {
+            let count = 1;
+
+            // vertical asc (abajo)
+            for (let i = row + 1; i < rows; i++) {
+                if (gameBoard[i][col] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            // vertical desc (arriba)
+            for (let i = row - 1; i >= 0; i--) {
+                if (gameBoard[i][col] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            return count;
+        }
+
+        function checkDiagonals(row, col) {
+            let count = 1;
+
+            // diagonal descendente (abajo-derecha)
+            for (let i = 1; row + i < rows && col + i < cols; i++) {
+                if (gameBoard[row + i][col + i] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            // diagonal ascendente (arriba-izquierda)
+            for (let i = 1; row - i >= 0 && col - i >= 0; i++) {
+                if (gameBoard[row - i][col - i] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            // diagonal descendente (abajo-izquierda)
+            for (let i = 1; row + i < rows && col - i >= 0; i++) {
+                if (gameBoard[row + i][col - i] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            // diagonal ascendente(arriba-derecha)
+            for (let i = 1; row - i >= 0 && col + i < cols; i++) {
+                if (gameBoard[row - i][col + i] === currentPlayer) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            return count;
+        }
+
+
+        function alertGuanyador(counter){
+            if (counter >= 4) {
+                alert("El ganador es: " + currentPlayer);
+                return;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+<h1><%= note.title %></h1>
+
+<div class="note-detail">
+    <div class="note-meta">
+        <span class="badge"><%= note.category %></span>
+        <span class="badge badge-<%= note.priority %>"><%= note.priority %></span>
+        <span class="badge"><%= note.completed ? '✅ Completada' : '⏳ Pendent' %></span>
+        <small>Creada: <%= new Date(note.createdAt).toLocaleString('ca-ES') %></small>
+    </div>
+
+    <div class="note-content">
+        <p><%= note.content %></p>
+    </div>
+
+    <div class="note-actions">
+        <form action="/notes/<%= note.id %>/toggle" method="POST" style="display:inline">
+            <button type="submit" class="btn">
+                <%= note.completed ? '↩️ Marcar Pendent' : '✅ Marcar Completada' %>
+            </button>
+        </form>
+        <form action="/notes/<%= note.id %>/delete" method="POST" style="display:inline"
+              onsubmit="return confirm('Segur que vols eliminar aquesta nota?')">
+            <button type="submit" class="btn btn-danger">🗑️ Eliminar</button>
+        </form>
+        <a href="/notes" class="btn">← Tornar</a>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
